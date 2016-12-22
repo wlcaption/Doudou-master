@@ -50,28 +50,28 @@
 
             <TextView
                 style="@style/MenuText"
-                android:drawableLeft="@mipmap/circle"
-                android:text="朋友圈" />
+                android:drawableLeft="@mipmap/beautiful_video"
+                android:text="美拍" />
 
             <TextView
                 style="@style/MenuText"
-                android:drawableLeft="@mipmap/wallet"
-                android:text="钱包" />
+                android:drawableLeft="@mipmap/news"
+                android:text="新闻" />
 
             <TextView
                 style="@style/MenuText"
-                android:drawableLeft="@mipmap/coupon"
-                android:text="优惠券" />
+                android:drawableLeft="@mipmap/beautiful_girl"
+                android:text="美女" />
 
             <TextView
                 style="@style/MenuText"
-                android:drawableLeft="@mipmap/friends"
-                android:text="好友" />
+                android:drawableLeft="@mipmap/share"
+                android:text="分享" />
 
             <TextView
                 style="@style/MenuText"
-                android:drawableLeft="@mipmap/settings"
-                android:text="设置" />
+                android:drawableLeft="@mipmap/about_us"
+                android:text="关于" />
         </com.ecity.wangfeng.doudouhappy.fantasyslide.SideBar>
 
         <com.ecity.wangfeng.doudouhappy.fantasyslide.SideBar
