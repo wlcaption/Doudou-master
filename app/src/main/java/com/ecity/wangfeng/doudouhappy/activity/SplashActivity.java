@@ -4,6 +4,7 @@ import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -23,11 +24,18 @@ public class SplashActivity extends AppCompatActivity {
     private boolean isShowingRubberEffect = false;
     private TextView mAppNameTv;
 
+    private boolean isFirstIn = false;
+    private Intent intent;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         overridePendingTransition(R.anim.zoomin, 0);
         setContentView(R.layout.activity_splash);
+
+        SharedPreferences preferences = getSharedPreferences("first_pref",
+                MODE_PRIVATE);
+        isFirstIn = preferences.getBoolean("isFirstIn", true);
 
         initView();
         initAnimation();
@@ -95,7 +103,12 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 try {
                     Thread.sleep(1000);
-                    startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                    if (isFirstIn) {
+                        intent = new Intent(SplashActivity.this, WelcomeActivity.class);
+                    } else {
+                        intent = new Intent(SplashActivity.this, MainActivity.class);
+                    }
+                    startActivity(intent);
                     overridePendingTransition(0, android.R.anim.fade_out);
                     finish();
                 } catch (InterruptedException e) {

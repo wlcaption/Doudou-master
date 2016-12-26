@@ -1,6 +1,7 @@
 package com.ecity.wangfeng.doudouhappy.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -44,7 +45,14 @@ public class WelcomeActivity extends AppCompatActivity {
         bt_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(WelcomeActivity.this, SplashActivity.class);
+                //存储是否第一次进入状态
+                SharedPreferences preferences = getSharedPreferences(
+                        "first_pref", MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putBoolean("isFirstIn", false);
+                editor.commit();
+
+                Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
