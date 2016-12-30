@@ -8,11 +8,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
+        <FrameLayout
+            android:id="@+id/main_content"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/fake" />
+            android:layout_height="match_parent" />
 
         <com.ecity.wangfeng.doudouhappy.fantasyslide.SideBar
             android:id="@+id/leftSideBar"
@@ -74,54 +73,5 @@
                 android:text="关于" />
         </com.ecity.wangfeng.doudouhappy.fantasyslide.SideBar>
 
-        <com.ecity.wangfeng.doudouhappy.fantasyslide.SideBar
-            android:id="@+id/rightSideBar"
-            android:layout_width="133dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:background="@drawable/bg_right_bar"
-            android:gravity="center_vertical|right"
-            app:maxTranslationX="-33dp">
-
-            <TextView
-                style="@style/MenuText"
-                android:text="星期一" />
-
-            <TextView
-                style="@style/MenuText"
-                android:text="星期二" />
-
-            <TextView
-                style="@style/MenuText"
-                android:text="星期三" />
-
-            <TextView
-                style="@style/MenuText"
-                android:text="星期四" />
-
-            <TextView
-                style="@style/MenuText"
-                android:text="星期五" />
-
-            <TextView
-                style="@style/MenuText"
-                android:text="星期六" />
-
-            <TextView
-                style="@style/MenuText"
-                android:text="星期日" />
-        </com.ecity.wangfeng.doudouhappy.fantasyslide.SideBar>
     </com.ecity.wangfeng.doudouhappy.fantasyslide.FantasyDrawerLayout>
-
-    <TextView
-        android:id="@+id/tipView"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:padding="20dp"
-        android:textColor="@color/colorAccent"
-        android:textSize="16sp"
-        android:visibility="invisible" />
 </RelativeLayout>

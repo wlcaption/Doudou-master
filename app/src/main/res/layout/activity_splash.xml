@@ -4,8 +4,7 @@
     android:id="@+id/activity_splash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2fd2ea"
-    tools:context="com.ys.yoosir.zzshow.mvp.ui.activities.SplashActivity">
+    android:background="#2fd2ea">
 
     <ImageView
         android:id="@+id/logo_bg"

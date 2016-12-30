@@ -24,7 +24,18 @@
         <activity
             android:name="com.ecity.wangfeng.doudouhappy.activity.UniversalActivity"
             android:theme="@style/UniversalTheme"></activity>
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:hardwareAccelerated="true" />
+
+        <meta-data android:value="58660baef29d982dd2000d51" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="guanfang" android:name="UMENG_CHANNEL"/>
     </application>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
 
 </manifest>
